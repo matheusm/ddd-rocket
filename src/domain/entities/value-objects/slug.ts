@@ -6,7 +6,7 @@ export class Slug {
 
   /**
    * Receives a string and nominalizes it to a slug
-   * 
+   *
    * Example: "How to cook a cake" -> "how-to-cook-a-cake"
    * @param text {string} - The text to be nominalized
    */
@@ -21,7 +21,7 @@ export class Slug {
       .replace(/_/g, '-')
       .replace(/--+/g, '-')
       .replace(/-$/g, '')
-      
+
     return new Slug(slugText)
   }
 }
