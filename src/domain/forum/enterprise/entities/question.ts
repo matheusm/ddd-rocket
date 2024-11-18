@@ -22,7 +22,7 @@ export class Question extends Entity<QuestionProps> {
     return new Question(
       {
         ...props,
-        createdAt: new Date(),
+        createdAt: props.createdAt ?? new Date(),
         slug: props.slug ?? Slug.createFromText(props.title),
       },
       id,
